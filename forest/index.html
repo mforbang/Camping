@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Forest</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            
+
+
+            <!-- assets used in the project -->
+            <a-asset-item id="treeObj" src="assets/models/lowPolytree/lowpolytree.obj"></a-asset-item>
+            <a-asset-item id="treeMtl" src="assets/models/lowPolytree/lowpolytree.mtl"></a-asset-item>
+            <a-asset-item id="campfire" src="assets/models/campfire/scene.gltf"></a-asset-item>
+            <a-asset-item id="log" src="assets/models/log/scene.gltf"></a-asset-item>
+            <a-asset-item id="tent" src="assets/models/tent/scene.gltf"></a-asset-item>
+            <audio id="fire" src="/assets/audio/campfire/Fire.mp3"></audio> 
+            <audio id="outside" src="/assets/audio/outside/Outside Night.mp3"></audio> 
+            <img id="sky" src="assets/textures/sky/sky2.jpg">
+            <img id="grass" src="assets/textures/grass/gras_0040_c.jpg">
+
+        </a-assets>
+
+        <!-- lighting -->
+        <a-entity light="type:ambient; intensity: 0.2;"></a-entity>
+        <a-entity light="type:point; intensity: 0.8; color:#E25822; castshadow:true;" position="0 0 -2"></a-entity>
+
+        <!-- models used for the forest -->
+        <!-- <a-entity forest> -->
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="5 2 -9"></a-entity> 
+        <!-- </a-entity> -->
+        <!-- <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-25 2 -12"></a-entity> -->
+       <!-- <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="3 2 -13"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="10 2 10"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-5 2 -20"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-9 2 -17"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-12 2 -7"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-25 2 -12"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-22 2 -34"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-15 2 -37"></a-entity> 
+        <a-entity obj-model="obj: #treeObj; mtl:#treeMtl; " position="-15 2 -37"></a-entity>  -->
+
+
+
+        <a-entity gltf-model ="#campfire" position="0 0 -3" scale="3 3 3" animation-mixer></a-entity>
+        <a-entity gltf-model ="#log" position="0 -1.5 1" scale="0.5 1 1"></a-entity>
+        <a-entity gltf-model ="#tent" scale="3 3 3" position="-8 1 -10" rotation="0 300"></a-entity>
+
+        <!-- sound="src: url(assets/audio/campfire/fire.mp3); autoplay: true; loop: true;" -->
+
+     
+        <!-- Enviroment -->
+      <a-sky src="#sky" repeat="6 6" width="100" height="100" sound="src: url(Outside Night.mp3)"; loop:true;></a-sky>
+      <!-- <a-scene background ="assets/textures/sky/sky.jpg"></a-scene> -->
+      <a-plane src="#grass" repeat="20 20" position="0 0 -4" rotation="-90 0 0" width="70" height="70"></a-plane>
+
+        <!-- controlling movement in the environment -->
+        <a-camera wasd-controls-enabled="false"></a-camera>
+
+       <!-- sounds in the environment -->
+        <a-sound src="#fire" autoplay="true" loop: true;></a-sound> 
+        <a-sound src="#outside" loop: true;></a-sound>
+    
+
+
+    </a-scene>
+    <script src="JS/script.js"></script>
+  </body>
+</html>

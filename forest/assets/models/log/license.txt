@@ -1,0 +1,11 @@
+Model Information:
+* title:	Log Scene
+* source:	https://sketchfab.com/3d-models/log-scene-6088d068edeb4ad59e244f80087d7e31
+* author:	HBradnam (https://sketchfab.com/HBradnam)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Log Scene" (https://sketchfab.com/3d-models/log-scene-6088d068edeb4ad59e244f80087d7e31) by HBradnam (https://sketchfab.com/HBradnam) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
